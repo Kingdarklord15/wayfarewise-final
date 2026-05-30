@@ -75,13 +75,27 @@ def recommendations():
 def itinerary():
     try:
 
-        trip = normalize_trip(
-            request.get_json(silent=True) or {}
-        )
+        payload = request.get_json(silent=True) or {}
 
-        results = recommend(
-            trip,
-            limit=1
+        trip = normalize_trip(payload)
+
+        destination_id = payload.get("destination_id")
+
+        destination = None
+
+        if destination_id:
+            destination = next(
+                (
+                     d for d in DESTINATIONS
+                     if d["id"] == destination_id
+                 ),
+                None
+                 )
+
+        if not destination:
+            results = recommend(
+        trip,
+        limit=1
         )
 
         destination = results[0] if results else None
