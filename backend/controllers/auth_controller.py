@@ -19,7 +19,7 @@ def signup():
 
     user = create_user(name, email, password)
     token = create_token(user)
-    return jsonify({"user": user, "token": token}), 201
+    return jsonify({"user": user, "token": token}),  201
 
 
 def login():
