@@ -229,7 +229,7 @@ Planned enhancements include:
 * Travel budget optimization
 * Personalized travel history
 
----
+--
 
 ## 🎓 Learning Outcomes
 
