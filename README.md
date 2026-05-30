@@ -250,8 +250,8 @@ This project helped us gain experience with:
 
 ##  Team
 
-# KDV
-# MS
+#  KDV
+#  MS
 
 Both team members collaboratively contributed to all aspects of the project, including frontend development, backend development, AI integration, recommendation systems, UI/UX design, testing, validation, and overall system design.
 
