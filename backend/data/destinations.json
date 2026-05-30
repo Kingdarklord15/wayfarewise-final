@@ -1,0 +1,377 @@
+[
+    {
+        "id": "mcleodganj",
+        "name": "McLeodganj",
+        "state": "Himachal Pradesh",
+        "country": "India",
+        "lat": 32.2426,
+        "lng": 76.3213,
+        "tags": ["mountains", "cafes", "photography", "trek", "spiritual", "peaceful"],
+        "moods": ["relaxing", "spiritual", "adventurous", "photography", "relaxed adventure"],
+        "groups": ["friends", "solo", "couple"],
+        "best_seasons": ["winter", "spring", "summer"],
+        "ideal_days": [3, 4],
+        "base_cost": 13800,
+        "weather_profile": "Cold and scenic",
+        "popularity": 72,
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1100&q=80",
+        "description": "Mountain cafes, monasteries, viewpoints, and short treks with strong budget fit.",
+        "reviews": [
+            "Travelers loved the peaceful cafes, mountain views, and Tibetan food.",
+            "Weekends can get crowded around the main square.",
+            "Great for photography and relaxed hikes."
+        ],
+        "hidden_gems": ["Naddi sunset point", "Dharamkot lanes", "Quiet book cafes"],
+        "attractions": ["Bhagsu waterfall", "Namgyal monastery", "Triund trail"],
+        "hotels": [
+            {"name": "Bhagsu Backpacker House", "price": 1500, "rating": 4.4, "type": "workcation"},
+            {"name": "Dharamkot View Stay", "price": 2600, "rating": 4.6, "type": "family"},
+            {"name": "Cloudline Boutique", "price": 5200, "rating": 4.8, "type": "luxury"}
+        ]
+    },
+    {
+        "id": "kasol",
+        "name": "Kasol",
+        "state": "Himachal Pradesh",
+        "country": "India",
+        "lat": 32.0100,
+        "lng": 77.3150,
+        "tags": ["mountains", "cafes", "trek", "party", "river", "backpacking"],
+        "moods": ["adventurous", "party", "backpacking", "relaxed adventure"],
+        "groups": ["friends", "solo"],
+        "best_seasons": ["spring", "summer", "autumn"],
+        "ideal_days": [3, 4, 5],
+        "base_cost": 14700,
+        "weather_profile": "Cool riverside climate",
+        "popularity": 86,
+        "rating": 4.5,
+        "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1100&q=80",
+        "description": "Riverside stays, hikes, music cafes, and backpacking energy for friend groups.",
+        "reviews": [
+            "People loved the river views, trails, and cafe culture.",
+            "The main market gets busy in season.",
+            "Best for friends who want an energetic mountain escape."
+        ],
+        "hidden_gems": ["Chalal trail", "Grahan village", "Quiet Parvati river bends"],
+        "attractions": ["Parvati river", "Chalal village", "Manikaran"],
+        "hotels": [
+            {"name": "Parvati River Hostel", "price": 1300, "rating": 4.3, "type": "backpacking"},
+            {"name": "Woodsmoke Cottage", "price": 3100, "rating": 4.5, "type": "family"},
+            {"name": "Alpine Glass Villa", "price": 6200, "rating": 4.7, "type": "luxury"}
+        ]
+    },
+    {
+        "id": "rishikesh",
+        "name": "Rishikesh",
+        "state": "Uttarakhand",
+        "country": "India",
+        "lat": 30.0869,
+        "lng": 78.2676,
+        "tags": ["river", "rafting", "spiritual", "cafes", "adventure", "yoga"],
+        "moods": ["adventurous", "spiritual", "relaxing", "relaxed adventure"],
+        "groups": ["friends", "family", "solo", "couple"],
+        "best_seasons": ["winter", "spring", "autumn"],
+        "ideal_days": [2, 3],
+        "base_cost": 11900,
+        "weather_profile": "Pleasant near the Ganga",
+        "popularity": 78,
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1580100586938-02822d99c4a8?auto=format&fit=crop&w=1100&q=80",
+        "description": "Rafting, yoga cafes, river walks, evening aarti, and quick access from Delhi.",
+        "reviews": [
+            "Travelers loved rafting, river cafes, and spiritual evenings.",
+            "Tapovan is lively but still manageable on weekdays.",
+            "Good balance of adventure and calm."
+        ],
+        "hidden_gems": ["Secret beach", "Neer Garh waterfall", "Quiet Tapovan cafes"],
+        "attractions": ["Laxman Jhula", "Ganga aarti", "Neer Garh waterfall"],
+        "hotels": [
+            {"name": "Tapovan Work Hostel", "price": 1100, "rating": 4.2, "type": "workcation"},
+            {"name": "Ganga Courtyard Stay", "price": 2800, "rating": 4.5, "type": "family"},
+            {"name": "Riverfront Retreat", "price": 6800, "rating": 4.8, "type": "luxury"}
+        ]
+    },
+    {
+        "id": "lansdowne",
+        "name": "Lansdowne",
+        "state": "Uttarakhand",
+        "country": "India",
+        "lat": 29.8377,
+        "lng": 78.6871,
+        "tags": ["peaceful", "cold", "photography", "forest", "budget", "weekend"],
+        "moods": ["relaxing", "photography", "peaceful"],
+        "groups": ["couple", "family", "friends", "solo"],
+        "best_seasons": ["winter", "spring", "summer"],
+        "ideal_days": [2, 3],
+        "base_cost": 9000,
+        "weather_profile": "Cold and calm",
+        "popularity": 45,
+        "rating": 4.3,
+        "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1100&q=80",
+        "description": "A quiet hill escape for low-crowd weekends, pine forests, and simple cafes.",
+        "reviews": [
+            "Travelers liked the silence, pine walks, and low crowd level.",
+            "Food options are simple but reliable.",
+            "A strong pick for peaceful budget travel."
+        ],
+        "hidden_gems": ["Tip-in-Top sunrise", "Bhulla Tal walk", "Quiet cantonment viewpoints"],
+        "attractions": ["Tip-in-Top", "Bhulla Tal", "St. Mary's Church"],
+        "hotels": [
+            {"name": "Pine Budget Homestay", "price": 950, "rating": 4.1, "type": "budget"},
+            {"name": "Forest Window Stay", "price": 2400, "rating": 4.4, "type": "family"},
+            {"name": "Cantonment Heritage Villa", "price": 5100, "rating": 4.6, "type": "luxury"}
+        ]
+    },
+    {
+        "id": "jaipur",
+        "name": "Jaipur",
+        "state": "Rajasthan",
+        "country": "India",
+        "lat": 26.9124,
+        "lng": 75.7873,
+        "tags": ["heritage", "food", "photography", "luxury", "shopping", "culture"],
+        "moods": ["luxury", "photography", "relaxing"],
+        "groups": ["family", "couple", "friends"],
+        "best_seasons": ["winter", "autumn"],
+        "ideal_days": [2, 3],
+        "base_cost": 12500,
+        "weather_profile": "Dry and pleasant in winter",
+        "popularity": 80,
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1599661046827-dacde6976549?auto=format&fit=crop&w=1100&q=80",
+        "description": "Forts, palaces, markets, street food, and colorful photo spots.",
+        "reviews": [
+            "Travelers loved forts, markets, and local food.",
+            "Popular monuments are busiest late morning.",
+            "Excellent destination for culture and photography."
+        ],
+        "hidden_gems": ["Panna Meena stepwell", "Nahargarh sunrise", "Local block-print lanes"],
+        "attractions": ["Amber Fort", "City Palace", "Hawa Mahal"],
+        "hotels": [
+            {"name": "Pink City Hostel", "price": 1200, "rating": 4.2, "type": "budget"},
+            {"name": "Haveli Family Stay", "price": 3300, "rating": 4.5, "type": "family"},
+            {"name": "Royal Courtyard Palace", "price": 7800, "rating": 4.9, "type": "luxury"}
+        ]
+    },
+    {
+        "id": "udaipur",
+        "name": "Udaipur",
+        "state": "Rajasthan",
+        "country": "India",
+        "lat": 24.5854,
+        "lng": 73.7125,
+        "tags": ["lakes", "luxury", "photography", "romantic", "food", "culture"],
+        "moods": ["luxury", "relaxing", "photography"],
+        "groups": ["couple", "family", "friends"],
+        "best_seasons": ["winter", "autumn"],
+        "ideal_days": [3, 4],
+        "base_cost": 17000,
+        "weather_profile": "Pleasant lake weather",
+        "popularity": 76,
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1100&q=80",
+        "description": "Lakes, palaces, rooftop restaurants, slow travel, and premium romantic vibes.",
+        "reviews": [
+            "Travelers loved lake views, rooftops, and old-city walks.",
+            "Premium stays are expensive near peak season.",
+            "Excellent for couples and slow luxury travel."
+        ],
+        "hidden_gems": ["Badi Lake", "Sajjangarh sunset edges", "Old-city art lanes"],
+        "attractions": ["Lake Pichola", "City Palace", "Sajjangarh"],
+        "hotels": [
+            {"name": "Old City Backpackers", "price": 1400, "rating": 4.2, "type": "budget"},
+            {"name": "Lake Lane Homestay", "price": 3600, "rating": 4.6, "type": "family"},
+            {"name": "Lake Palace View Resort", "price": 9200, "rating": 4.9, "type": "luxury"}
+        ]
+    },
+    {
+    "id": "goa",
+    "name": "Goa",
+    "state": "Goa",
+    "country": "India",
+    "lat": 15.2993,
+    "lng": 74.1240,
+
+    "tags": [
+        "beaches",
+        "nightlife",
+        "luxury",
+        "party",
+        "seafood",
+        "water sports"
+    ],
+
+    "moods": [
+        "luxury",
+        "party",
+        "fun",
+        "romantic"
+    ],
+
+    "groups": [
+        "friends",
+        "couple",
+        "solo"
+    ],
+
+    "best_seasons": [
+        "winter",
+        "spring"
+    ],
+
+    "ideal_days": [3, 4, 5],
+
+    "base_cost": 22000,
+
+    "weather_profile": "Warm tropical beach climate",
+
+    "popularity": 95,
+
+    "rating": 4.8,
+
+    "image":
+    "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2",
+
+    "description":
+    "Beach parties, nightlife, seafood, luxury resorts, and water sports.",
+
+    "reviews": [
+        "Best destination for beach nightlife and parties.",
+        "Luxury resorts and cafes are excellent.",
+        "Great for friend groups and couples."
+    ],
+
+    "hidden_gems": [
+        "Butterfly beach",
+        "Fontainhas",
+        "South Goa hidden cafes"
+    ],
+
+    "attractions": [
+        "Baga beach",
+        "Anjuna",
+        "Fort Aguada"
+    ],
+
+    "hotels": [
+        {
+            "name": "Goa Beach Hostel",
+            "price": 1800,
+            "rating": 4.2,
+            "type": "budget"
+        },
+
+        {
+            "name": "Sea View Resort",
+            "price": 4500,
+            "rating": 4.5,
+            "type": "family"
+        },
+
+        {
+            "name": "Luxury Ocean Palace",
+            "price": 12000,
+            "rating": 4.9,
+            "type": "luxury"
+        }
+    ]
+},
+{
+    "id": "coorg",
+
+    "name": "Coorg",
+
+    "state": "Karnataka",
+
+    "country": "India",
+
+    "lat": 12.3375,
+
+    "lng": 75.8069,
+
+    "tags": [
+        "nature",
+        "coffee",
+        "waterfalls",
+        "wildlife",
+        "photography",
+        "forest"
+    ],
+
+    "moods": [
+        "peaceful",
+        "relaxing",
+        "nature"
+    ],
+
+    "groups": [
+        "family",
+        "couple",
+        "friends"
+    ],
+
+    "best_seasons": [
+        "winter",
+        "monsoon"
+    ],
+
+    "ideal_days": [3, 4],
+
+    "base_cost": 16000,
+
+    "weather_profile":
+    "Cool forest and coffee-estate climate",
+
+    "popularity": 70,
+
+    "rating": 4.7,
+
+    "image":
+    "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+
+    "description":
+    "Coffee plantations, waterfalls, forest stays, wildlife, and peaceful nature escapes.",
+
+    "reviews": [
+        "Beautiful greenery and coffee estates.",
+        "Very peaceful and scenic.",
+        "Perfect for nature photography."
+    ],
+
+    "hidden_gems": [
+        "Mandalpatti sunrise",
+        "Coffee estate walks",
+        "Hidden waterfalls"
+    ],
+
+    "attractions": [
+        "Abbey Falls",
+        "Raja Seat",
+        "Dubare Elephant Camp"
+    ],
+
+    "hotels": [
+        {
+            "name": "Coffee Estate Stay",
+            "price": 2200,
+            "rating": 4.4,
+            "type": "budget"
+        },
+
+        {
+            "name": "Forest Family Resort",
+            "price": 4200,
+            "rating": 4.6,
+            "type": "family"
+        },
+
+        {
+            "name": "Luxury Jungle Retreat",
+            "price": 9800,
+            "rating": 4.8,
+            "type": "luxury"
+        }
+    ]
+}
+]
