@@ -85,20 +85,20 @@ def itinerary():
 
         if destination_id:
             destination = next(
-                (
-                     d for d in DESTINATIONS
-                     if d["id"] == destination_id
-                 ),
-                None
-                 )
+              (
+            d for d in DESTINATIONS
+            if d["id"] == destination_id
+             ),
+             None
+             )
 
         if not destination:
             results = recommend(
-        trip,
-        limit=1
-        )
+                 trip,
+                 limit=1
+             )
 
-        destination = results[0] if results else None
+            destination = results[0] if results else None
 
         if not destination:
             return jsonify({
