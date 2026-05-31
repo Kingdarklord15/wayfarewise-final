@@ -46,6 +46,7 @@ export default function Planner() {
   const [selected, setSelected] = useState(null);
 
   const [mapData, setMapData] = useState(null);
+  console.log("mapData =", mapData);
 
   const [itinerary, setItinerary] = useState([]);
   const [hotels, setHotels] = useState([]);
@@ -86,7 +87,7 @@ export default function Planner() {
 
       setMapData(data.map);
 
- 
+
 
     } catch (error) {
 
@@ -371,7 +372,7 @@ export default function Planner() {
 
                   <p className="mt-2 text-white/60">
                     Get personalized travel recommendations and
-build a complete itinerary in seconds.
+                    build a complete itinerary in seconds.
                   </p>
 
                 </motion.div>
@@ -400,7 +401,7 @@ build a complete itinerary in seconds.
             >
 
               <MapPanel map={mapData}
- />
+              />
 
               <WeatherCard weather={weather} />
 
@@ -440,196 +441,196 @@ build a complete itinerary in seconds.
                   className="mt-5 grid gap-4"
                 >
 
-                    {itinerary?.map((day) => (
+                  {itinerary?.map((day) => (
 
-                      <motion.article
-                        variants={fadeUp}
-                        whileHover={{ x: 4 }}
-                        key={day.day}
-                        className="rounded-lg bg-white/10 p-4"
-                      >
+                    <motion.article
+                      variants={fadeUp}
+                      whileHover={{ x: 4 }}
+                      key={day.day}
+                      className="rounded-lg bg-white/10 p-4"
+                    >
 
-                        <p className="font-black text-coral">
-                          Day {day.day}
-                        </p>
-
-                        <h3 className="text-xl font-black">
-                          {day.title}
-                        </h3>
-
-                        <div className="mt-3 grid gap-2 text-sm text-white/68">
-
-                          <p>
-                            <strong className="text-white">
-                              Morning:
-                            </strong>{" "}
-                            {day.morning}
-                          </p>
-
-                          <p>
-                            <strong className="text-white">
-                              Afternoon:
-                            </strong>{" "}
-                            {day.afternoon}
-                          </p>
-
-                          <p>
-                            <strong className="text-white">
-                              Evening:
-                            </strong>{" "}
-                            {day.evening}
-                          </p>
-
-                        </div>
-
-                      </motion.article>
-                    ))}
-
-                  </motion.div>
-
-                </motion.section>
-
-              </motion.div>
-
-              <motion.aside
-                variants={stagger}
-                initial="hidden"
-                animate="show"
-                className="space-y-5"
-              >
-
-                <motion.section
-                  variants={fadeUp}
-                  className="glass rounded-lg p-5"
-                >
-
-                  <h2 className="text-2xl font-black">
-                    Budget Optimization
-                  </h2>
-
-                  {budget && (
-
-                    <div className="mt-4 grid gap-2 text-sm">
-
-                      {Object.entries(
-                        budget?.breakdown || {}
-                      )
-                        .filter(
-                          ([key]) =>
-                            key !== "savings_tip"
-                        )
-                        .map(([key, value]) => (
-
-                          <motion.div
-                            whileHover={{ x: 4 }}
-                            key={key}
-                            className="flex justify-between rounded-lg bg-white/10 p-3"
-                          >
-
-                            <span className="capitalize text-white/60">
-                              {key}
-                            </span>
-
-                            <strong>
-                              {money(value)}
-                            </strong>
-
-                          </motion.div>
-                        ))}
-
-                      <p className="mt-2 text-aqua">
-                        {budget?.breakdown?.savings_tip}
+                      <p className="font-black text-coral">
+                        Day {day.day}
                       </p>
 
+                      <h3 className="text-xl font-black">
+                        {day.title}
+                      </h3>
+
+                      <div className="mt-3 grid gap-2 text-sm text-white/68">
+
+                        <p>
+                          <strong className="text-white">
+                            Morning:
+                          </strong>{" "}
+                          {day.morning}
+                        </p>
+
+                        <p>
+                          <strong className="text-white">
+                            Afternoon:
+                          </strong>{" "}
+                          {day.afternoon}
+                        </p>
+
+                        <p>
+                          <strong className="text-white">
+                            Evening:
+                          </strong>{" "}
+                          {day.evening}
+                        </p>
+
+                      </div>
+
+                    </motion.article>
+                  ))}
+
+                </motion.div>
+
+              </motion.section>
+
+            </motion.div>
+
+            <motion.aside
+              variants={stagger}
+              initial="hidden"
+              animate="show"
+              className="space-y-5"
+            >
+
+              <motion.section
+                variants={fadeUp}
+                className="glass rounded-lg p-5"
+              >
+
+                <h2 className="text-2xl font-black">
+                  Budget Optimization
+                </h2>
+
+                {budget && (
+
+                  <div className="mt-4 grid gap-2 text-sm">
+
+                    {Object.entries(
+                      budget?.breakdown || {}
+                    )
+                      .filter(
+                        ([key]) =>
+                          key !== "savings_tip"
+                      )
+                      .map(([key, value]) => (
+
+                        <motion.div
+                          whileHover={{ x: 4 }}
+                          key={key}
+                          className="flex justify-between rounded-lg bg-white/10 p-3"
+                        >
+
+                          <span className="capitalize text-white/60">
+                            {key}
+                          </span>
+
+                          <strong>
+                            {money(value)}
+                          </strong>
+
+                        </motion.div>
+                      ))}
+
+                    <p className="mt-2 text-aqua">
+                      {budget?.breakdown?.savings_tip}
+                    </p>
+
+                  </div>
+                )}
+
+              </motion.section>
+
+              <motion.section
+                variants={fadeUp}
+                className="glass rounded-lg p-5"
+              >
+
+                <h2 className="text-2xl font-black">
+                  Hotels
+                </h2>
+
+                <div className="mt-4 grid gap-3">
+
+                  {hotels?.length > 0 ? (
+                    hotels.map((hotel) => (
+                      <HotelCard
+                        key={hotel.name}
+                        hotel={hotel}
+                      />
+                    ))
+                  ) : (
+                    <div className="rounded-lg bg-white/10 p-6 text-center">
+                      <div className="text-4xl mb-3">🏨</div>
+                      <h3 className="font-black text-lg">
+                        Coming Soon
+                      </h3>
+                      <p className="text-white/60 mt-2">
+                        Hotel recommendations will be available in a future update.
+                      </p>
                     </div>
                   )}
 
-                </motion.section>
+                </div>
 
-                <motion.section
-                  variants={fadeUp}
-                  className="glass rounded-lg p-5"
-                >
+              </motion.section>
 
-                  <h2 className="text-2xl font-black">
-                    Hotels
-                  </h2>
+              <motion.section
+                variants={fadeUp}
+                className="glass rounded-lg p-5"
+              >
 
-                  <div className="mt-4 grid gap-3">
+                <h2 className="text-2xl font-black">
+                  Hidden Gems
+                </h2>
 
-  {hotels?.length > 0 ? (
-    hotels.map((hotel) => (
-      <HotelCard
-        key={hotel.name}
-        hotel={hotel}
-      />
-    ))
-  ) : (
-    <div className="rounded-lg bg-white/10 p-6 text-center">
-      <div className="text-4xl mb-3">🏨</div>
-      <h3 className="font-black text-lg">
-        Coming Soon
-      </h3>
-      <p className="text-white/60 mt-2">
-        Hotel recommendations will be available in a future update.
-      </p>
-    </div>
-  )}
+                <div className="mt-4 grid gap-3">
 
-</div>
+                  {gems?.length > 0 ? (
+                    gems.map((gem) => (
+                      <motion.div
+                        whileHover={{ x: 4 }}
+                        key={gem.name}
+                        className="rounded-lg bg-white/10 p-3"
+                      >
+                        <p className="font-black">
+                          {gem.name}
+                        </p>
 
-                </motion.section>
+                        <p className="text-sm text-white/60">
+                          {gem.reason}
+                        </p>
+                      </motion.div>
+                    ))
+                  ) : (
+                    <div className="rounded-lg bg-white/10 p-6 text-center">
+                      <div className="text-4xl mb-3">💎</div>
+                      <h3 className="font-black text-lg">
+                        Coming Soon
+                      </h3>
+                      <p className="text-white/60 mt-2">
+                        Hidden gem recommendations will be available in a future update.
+                      </p>
+                    </div>
+                  )}
 
-                <motion.section
-                  variants={fadeUp}
-                  className="glass rounded-lg p-5"
-                >
+                </div>
 
-                  <h2 className="text-2xl font-black">
-                    Hidden Gems
-                  </h2>
+              </motion.section>
 
-                  <div className="mt-4 grid gap-3">
+            </motion.aside>
 
-  {gems?.length > 0 ? (
-    gems.map((gem) => (
-      <motion.div
-        whileHover={{ x: 4 }}
-        key={gem.name}
-        className="rounded-lg bg-white/10 p-3"
-      >
-        <p className="font-black">
-          {gem.name}
-        </p>
+          </motion.section>
+        )}
 
-        <p className="text-sm text-white/60">
-          {gem.reason}
-        </p>
-      </motion.div>
-    ))
-  ) : (
-    <div className="rounded-lg bg-white/10 p-6 text-center">
-      <div className="text-4xl mb-3">💎</div>
-      <h3 className="font-black text-lg">
-        Coming Soon
-      </h3>
-      <p className="text-white/60 mt-2">
-        Hidden gem recommendations will be available in a future update.
-      </p>
-    </div>
-  )}
+      </LayoutGroup>
 
-</div>
-
-                </motion.section>
-
-              </motion.aside>
-
-            </motion.section>
-          )}
-
-        </LayoutGroup>
-
-      </motion.main>
-    );
-  }
+    </motion.main>
+  );
+}
