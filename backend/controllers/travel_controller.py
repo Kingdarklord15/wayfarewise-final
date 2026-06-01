@@ -1,5 +1,9 @@
+from services.validation_service import validate_trip_request
 import json
 import re
+import logging
+
+logger = logging.getLogger(__name__)
 
 from flask import (
     Response,
@@ -50,7 +54,9 @@ def recommendations():
             request.get_json(silent=True) or {}
         )
 
-        print("FULL TRIP =", trip)
+        import logging
+
+        logging.info(f"FULL TRIP = {trip}")
 
         results = recommend(
             trip,
@@ -68,8 +74,10 @@ def recommendations():
         traceback.print_exc()
 
         return jsonify({
-            "error": str(e)
-        }), 500
+    "message": "Internal server error",
+    "code": "SERVER_ERROR",
+    "details": str(e)
+}), 500
 
 
 def itinerary():
@@ -78,6 +86,15 @@ def itinerary():
         payload = request.get_json(silent=True) or {}
 
         trip = normalize_trip(payload)
+
+        errors = validate_trip_request(trip)
+
+        if errors:
+            return jsonify({
+                "message": "Validation failed",
+                "code": "VALIDATION_ERROR",
+                "details": errors
+            }), 400
 
         destination_id = payload.get("destination_id")
 
@@ -119,8 +136,10 @@ def itinerary():
         traceback.print_exc()
 
         return jsonify({
-            "error": str(e)
-        }), 500
+    "message": "Internal server error",
+    "code": "SERVER_ERROR",
+    "details": str(e)
+}), 500
 # =========================================================
 # IMPROVED CHAT PARSER
 # =========================================================
@@ -567,3 +586,11 @@ def save_current_trip():
     return jsonify({
         "saved_trip": saved
     }), 201
+
+def health():
+
+    return jsonify({
+        "status": "healthy",
+        "service": "WayfareWise API"
+    })
+

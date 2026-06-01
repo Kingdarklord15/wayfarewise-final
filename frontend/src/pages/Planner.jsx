@@ -149,6 +149,8 @@ export default function Planner() {
     setMapData(
       planData?.map ?? mapData
     );
+    console.log("hotelsData =", hotelsData);
+    console.log("gemsData =", gemsData);
 
     setHotels(
       hotelsData?.hotels || []
