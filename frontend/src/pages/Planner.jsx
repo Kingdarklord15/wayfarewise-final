@@ -59,6 +59,9 @@ export default function Planner() {
 
   const [loading, setLoading] = useState(false);
 
+  const [detailLoading, setDetailLoading] =
+  useState(false);
+
   const [message, setMessage] = useState("");
 
   async function generate(event) {
@@ -101,10 +104,14 @@ export default function Planner() {
     }
   }
 
-  async function selectDestination(
-    destination,
-    scroll = true
-  ) {
+ async function selectDestination(
+  destination,
+  scroll = true
+) {
+
+  setDetailLoading(true);
+
+  try {
 
     setSelected(destination);
 
@@ -140,6 +147,7 @@ export default function Planner() {
       )
 
     ]);
+
     console.log("PLAN DATA =", planData);
 
     setItinerary(
@@ -149,6 +157,7 @@ export default function Planner() {
     setMapData(
       planData?.map ?? mapData
     );
+
     console.log("hotelsData =", hotelsData);
     console.log("gemsData =", gemsData);
 
@@ -176,8 +185,21 @@ export default function Planner() {
           behavior: "smooth"
         });
     }
-  }
 
+  } catch (error) {
+
+    console.error(error);
+
+    setMessage(
+      "Failed to load trip details."
+    );
+
+  } finally {
+
+    setDetailLoading(false);
+
+  }
+}
   async function saveFavorite(name) {
 
     if (!isAuthed) {
