@@ -37,7 +37,7 @@ export default function DestinationCard({
         <div className="mb-3 flex items-start justify-between gap-3">
           <div>
             <h3 className="text-2xl font-black">
-              {destination.name}
+              🏔️ {destination.name}
             </h3>
 
             <p className="text-sm text-white/55">
@@ -62,7 +62,7 @@ export default function DestinationCard({
             }}
             className="rounded-full bg-aqua px-3 py-1 text-sm font-black text-night"
           >
-            {destination.match_score}%
+            {Math.min(destination.match_score || 0, 100).toFixed(1)}%
           </motion.span>
         </div>
 
@@ -102,22 +102,17 @@ export default function DestinationCard({
           </div>
         </div>
 
-        <div className="mt-3 rounded-lg bg-aqua/10 p-3 text-xs text-aqua">
-          Vector similarity:
-          <strong>
-            {" "}
-            {destination.semantic_score || 0}%
-          </strong>
+        <div className="mt-3 rounded-lg bg-aqua/10 p-3 text-sm text-aqua">
+          <strong>Excellent Match</strong>
 
-          <span className="text-white/50">
-            {" "}
-            via {destination.embedding_source || "local"} embeddings
+          <span className="block text-white/70 mt-1">
+            Based on your travel style, budget and interests.
           </span>
         </div>
 
         <div className="mt-3 flex gap-2 flex-wrap">
-          <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-white">
-            Optimized for {destination.optimized_for}
+          <span className="rounded-full bg-aqua/15 px-3 py-1 text-xs text-aqua">
+            Perfect for {destination.optimized_for}
           </span>
 
           <span className="rounded-full bg-coral/20 px-3 py-1 text-xs text-coral">
@@ -143,7 +138,7 @@ export default function DestinationCard({
             onClick={() => onFavorite(destination.name)}
             className="btn-secondary px-4 py-2"
           >
-            Save
+            ❤️ Save
           </motion.button>
         </div>
       </div>
