@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #eef7ff;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(71, 229, 188, 0.18), transparent 28%),
+    radial-gradient(circle at 78% 8%, rgba(255, 122, 104, 0.16), transparent 28%),
+    linear-gradient(135deg, #07111f 0%, #0d1d32 48%, #07111f 100%);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body::before {
+  animation: ambientShift 16s ease-in-out infinite alternate;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(71, 229, 188, 0.18), transparent 26%),
+    radial-gradient(circle at 82% 14%, rgba(255, 122, 104, 0.14), transparent 28%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+}
+
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(15, 28, 48, 0.72);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px rgba(2, 8, 18, 0.32);
+}
+
+.soft-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+  backdrop-filter: blur(18px);
+}
+
+.hero-bg {
+  background:
+    linear-gradient(90deg, rgba(7, 17, 31, 0.86), rgba(7, 17, 31, 0.42)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+
+.hero-bg::before {
+  animation: slowZoom 22s ease-in-out infinite alternate;
+  background:
+    linear-gradient(90deg, rgba(7, 17, 31, 0.86), rgba(7, 17, 31, 0.42)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85") center/cover;
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: scale(1.02);
+}
+
+.hero-bg > * {
+  position: relative;
+}
+
+.btn-primary {
+  @apply rounded-lg bg-aqua px-5 py-3 font-extrabold text-night transition hover:-translate-y-0.5 hover:shadow-glow;
+}
+
+.btn-secondary {
+  @apply rounded-lg border border-white/15 bg-white/10 px-5 py-3 font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/15;
+}
+
+.input {
+  @apply h-12 w-full rounded-lg border border-white/10 bg-white/10 px-4 text-white outline-none transition placeholder:text-white/45 focus:border-aqua/70 focus:ring-4 focus:ring-aqua/10;
+}
+
+.label {
+  @apply mb-2 block text-xs font-extrabold uppercase tracking-wide text-white/55;
+}
+
+.mapboxgl-control-container {
+  display: none;
+}
+
+.shine {
+  overflow: hidden;
+  position: relative;
+}
+
+.shine::after {
+  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.26), transparent 72%);
+  content: "";
+  height: 160%;
+  left: -80%;
+  position: absolute;
+  top: -30%;
+  transform: rotate(12deg);
+  transition: left 0.7s ease;
+  width: 42%;
+}
+
+.shine:hover::after {
+  left: 120%;
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.09) translate3d(-1.5%, 1%, 0);
+  }
+}
+
+@keyframes ambientShift {
+  from {
+    opacity: 0.72;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, -18px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
