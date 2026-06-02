@@ -484,26 +484,39 @@ export default function Planner() {
 
                       <div className="mt-3 grid gap-2 text-sm text-white/68">
 
-                        <p>
-                          <strong className="text-white">
-                            Morning:
-                          </strong>{" "}
-                          {day.morning}
-                        </p>
+                       <div className="mt-3 grid gap-3 text-sm">
 
-                        <p>
-                          <strong className="text-white">
-                            Afternoon:
-                          </strong>{" "}
-                          {day.afternoon}
-                        </p>
+  <div className="rounded-lg bg-white/5 p-3">
+    <p className="font-black text-aqua">
+      🌅 Morning
+    </p>
 
-                        <p>
-                          <strong className="text-white">
-                            Evening:
-                          </strong>{" "}
-                          {day.evening}
-                        </p>
+    <p className="mt-1 text-white/70">
+      {day.morning}
+    </p>
+  </div>
+
+  <div className="rounded-lg bg-white/5 p-3">
+    <p className="font-black text-coral">
+      ☀️ Afternoon
+    </p>
+
+    <p className="mt-1 text-white/70">
+      {day.afternoon}
+    </p>
+  </div>
+
+  <div className="rounded-lg bg-white/5 p-3">
+    <p className="font-black text-purple-300">
+      🌙 Evening
+    </p>
+
+    <p className="mt-1 text-white/70">
+      {day.evening}
+    </p>
+  </div>
+
+</div>
 
                       </div>
 

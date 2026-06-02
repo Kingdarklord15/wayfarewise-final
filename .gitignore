@@ -11,3 +11,5 @@ __pycache__/
 .vercel/
 .idea/
 .vscode/
+.vite/
+embedding_service_backup.py
