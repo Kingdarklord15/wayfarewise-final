@@ -17,7 +17,7 @@ export default function Login() {
       await login(form);
       navigate("/dashboard");
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed. Create an account first.");
+      setError(err.response?.data?.message || "Account not found. Please sign up first.");
     } finally {
       setLoading(false);
     }
