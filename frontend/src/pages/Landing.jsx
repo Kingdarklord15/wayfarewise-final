@@ -3,30 +3,31 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero.jsx";
 import { cardPop, fadeUp, stagger } from "../animations/variants";
 
-const features = [
+
+  const features = [
   [
-    "AI Recommendations",
-    "Personalized destination ranking based on budget, interests, season, and travel style."
+    "Smart Recommendations",
+    "Get personalized destination suggestions based on your budget, interests, season, and travel preferences."
   ],
   [
-    "Itinerary Generator",
-    "Generate day-wise travel plans with attractions, activities, food, and experiences."
+    "Trip Planner",
+    "Create detailed day-by-day itineraries including attractions, activities, dining options, and experiences."
   ],
   [
-    "Travel Insights",
-    "View destination highlights, ratings, travel suitability, and key trip information."
+    "Destination Insights",
+    "Explore key destination details, ratings, travel suitability, and popular highlights."
   ],
   [
-    "Preference Matching",
-    "Match destinations based on mood, interests, season, and travel style."
+    "Preference-Based Matching",
+    "Discover destinations that align with your mood, interests, preferred season, and travel style."
   ],
   [
-    "Budget Planning",
-    "Compare travel options and discover destinations that fit your budget."
+    "Budget Management",
+    "Compare travel choices and find destinations that fit within your spending plan."
   ],
   [
-    "Interactive Maps",
-    "Explore destinations, attractions, and suggested routes on an interactive map."
+    "Interactive Navigation",
+    "Browse destinations, attractions, and recommended routes through interactive maps."
   ]
 ];
 
